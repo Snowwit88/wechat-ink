@@ -1,6 +1,6 @@
 # 来源与许可
 
-WeChat Ink（微墨）由 SunQuan96 独立维护。
+WeChat Ink（微墨）由 Snowwit88 独立维护。
 
 部分基础脚本、排版主题及参考资源沿用自 https://github.com/jiji262/wechat-publisher ，并在此基础上定制。上游 README 的 License 一节声明 MIT；核对时，上游仓库未提供单独的 LICENSE 文件。本仓库将该许可文本补齐在 LICENSE 中，并保留上游贡献者署名。该文件是本分发版整理的声明，不冒充从上游取得的原始文件。
 
