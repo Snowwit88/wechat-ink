@@ -1,6 +1,6 @@
 # WeChat Ink · 微墨
 
-微信公众号写作、配图与排版助手。
+微信公众号写作、配图与排版助手，由 **SunQuan96** 开发与维护。
 
 把公众号文章从选题、资料研究、写作、配图、排版，推进到微信草稿箱的一套 AI 技能与配套工具。
 
@@ -29,7 +29,7 @@ python3 install.py
 
 安装器会创建独立环境并安装依赖，不覆盖已有同名技能。Windows 原生可使用 `py install.py`；自动草稿的固定出口流程需在 WSL 内安装和运行。
 
-也可把项目文件夹交给 AI 并复制 [安装与首次使用提示词](GETTING_STARTED.md)。详细配置与离线示例见 [使用说明](wechat-publisher/README.md)。
+也可把项目文件夹交给 AI 并复制 [安装与首次使用提示词](GETTING_STARTED.md)。详细配置与离线示例见 [使用说明](wechat-ink/README.md)。
 
 ## 你需要准备什么
 
@@ -45,7 +45,7 @@ python3 install.py
 ```text
 install.py                 安装入口
 GETTING_STARTED.md         可直接交给 AI 的提示词
-wechat-publisher/
+wechat-ink/
   SKILL.md                 AI 工作流程
   README.md                配置与操作说明
   scripts/                 生图、排版、审校与微信工具
@@ -60,11 +60,11 @@ wechat-publisher/
 ## 测试
 
 ```sh
-python3 -m pip install -r wechat-publisher/requirements.txt
-python3 -m pytest wechat-publisher/tests -q
+python3 -m pip install -r wechat-ink/requirements.txt
+python3 -m pytest wechat-ink/tests -q
 ```
 
-本地已通过 54 项测试；5 项可选 Bun 测试在未安装 Bun 时跳过。真实生图与微信接口需要使用者自行配置后验证。完整范围见 [验证说明](验证说明.md)。风格评分只是启发式检查，不保证平台 AI 判定结果。
+本地已通过 58 项测试；5 项可选 Bun 测试在未安装 Bun 时跳过。真实生图与微信接口需要使用者自行配置后验证。完整范围见 [验证说明](验证说明.md)。风格评分只是启发式检查，不保证平台 AI 判定结果。
 
 ## 致谢
 

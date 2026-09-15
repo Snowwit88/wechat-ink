@@ -13,6 +13,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - run: python -m pip install -r wechat-publisher/requirements.txt
-      - run: python -m pytest wechat-publisher/tests -q
-      - run: bash -n wechat-publisher/operations/wechat-egress.sh
+      - run: python -m pip install -r wechat-ink/requirements.txt
+      - run: python -m pytest wechat-ink/tests -q
+      - run: bash -n wechat-ink/operations/wechat-egress.sh

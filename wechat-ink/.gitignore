@@ -1,0 +1,13 @@
+wechat-ink.yaml
+wechat-ink.yaml.*
+!wechat-ink.yaml.example
+operations/wechat-egress.local.env
+.token_cache*
+**/.token_cache*
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+*.log
+output/

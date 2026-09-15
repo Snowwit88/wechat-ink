@@ -10,14 +10,14 @@ def main():
     args=parser.parse_args()
     if sys.version_info < (3,10):
         parser.error('需要 Python 3.10 或更高版本')
-    source=Path(__file__).resolve().parent/'wechat-publisher'
+    source=Path(__file__).resolve().parent/'wechat-ink'
     home=Path(os.environ.get('CODEX_HOME', str(Path.home()/'.codex'))).expanduser()
-    target=(args.target or home/'skills/wechat-publisher').expanduser().resolve()
+    target=(args.target or home/'skills/wechat-ink').expanduser().resolve()
     if target.exists():
         parser.error('目标已存在，为保护原有技能和配置，未做任何修改：'+str(target))
-    shutil.copytree(source,target)
-    config=target/'wechat-publisher.yaml'
-    shutil.copyfile(target/'wechat-publisher.yaml.example',config)
+    shutil.copytree(source,target,ignore=shutil.ignore_patterns('.venv', '__pycache__', '.pytest_cache', '*.pyc', '.token_cache*', 'wechat-ink.yaml', 'wechat-egress.local.env', '*.log'))
+    config=target/'wechat-ink.yaml'
+    shutil.copyfile(target/'wechat-ink.yaml.example',config)
     config.chmod(0o600)
     print('技能已复制到：',target)
     if not args.skip_deps:

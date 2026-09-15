@@ -1,6 +1,6 @@
-**/wechat-publisher.yaml
-**/wechat-publisher.yaml.*
-!**/wechat-publisher.yaml.example
+**/wechat-ink.yaml
+**/wechat-ink.yaml.*
+!**/wechat-ink.yaml.example
 **/wechat-egress.local.env
 **/.token_cache*
 **/.venv/
@@ -13,3 +13,6 @@
 .DS_Store
 output/
 dist/
+
+**/wechat-publisher.yaml
+**/wechat-publisher.yaml.*
