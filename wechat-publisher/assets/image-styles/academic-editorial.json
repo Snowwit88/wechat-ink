@@ -1,0 +1,46 @@
+{
+  "style_name": "academic-editorial",
+  "display_name": "低饱和学术插画",
+  "description": "低饱和藏蓝与古金，克制的编辑插画，配合 academic-paper。",
+  "suitable_for": [
+    "concept-explanation",
+    "architecture-diagram",
+    "process-flow",
+    "comparison",
+    "tutorial",
+    "deep-analysis"
+  ],
+  "newspic_ready": true,
+  "article_ready": true,
+  "canvas": {
+    "newspic_aspect": "1:1",
+    "newspic_size": "1080x1080",
+    "article_aspect": "7:4",
+    "article_size": "1792x1024"
+  },
+  "palette": {
+    "background": "#f5f1e8",
+    "primary": "#26384b",
+    "accent": "#a68b56",
+    "text": "#0b1530",
+    "line": "#2e3a5e"
+  },
+  "typography": {
+    "heading": "手写风中文字体(类似 楷体 / Kalam)",
+    "body": "手写风中文字体",
+    "weight_contrast": "全员手写不讲字重"
+  },
+  "mood": [
+    "friendly",
+    "clean",
+    "nerdy",
+    "approachable",
+    "educational"
+  ],
+  "prompt_template": {
+    "newspic_card": "Generate a hand-drawn sketch style infographic card in Chinese, 1:1 square. Pure white background. Theme: '{card_main}'. Draw with clean hand-drawn lines in navy (#2e3a5e), use blue (#4a6cf7) as the primary accent color, orange (#ff8c42) as secondary accent. Include Chinese labels using hand-written-style font. Visual elements: arrows, boxes, circles, simple icons, annotation marks. Minimalist tech-illustration feel, like a developer's notebook sketch. No photos, no 3D rendering, no gradients, no dark backgrounds.",
+    "article_inline": "Academic editorial illustration about '{image_subject}', 1792x1024 landscape. Muted navy and antique gold on warm paper. Restrained composition with clear causal relationships. No decorative elements, logos, pseudo-text or invented numerical charts."
+  },
+  "example_reference": "",
+  "notes": "默认 1792×1024 PNG；封面另裁成 16:9。避免伪文字、装饰图标和无法核验的图表。"
+}

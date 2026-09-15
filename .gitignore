@@ -1,0 +1,15 @@
+**/wechat-publisher.yaml
+**/wechat-publisher.yaml.*
+!**/wechat-publisher.yaml.example
+**/wechat-egress.local.env
+**/.token_cache*
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+*.log
+.env
+.env.*
+.DS_Store
+output/
+dist/

@@ -1,0 +1,22 @@
+# 复制为 wechat-publisher.yaml，仅在自己电脑填写；不要再次分享真实配置。
+default: main
+accounts:
+  main:
+    name: "我的公众号"
+    app_id: ""
+    app_secret: ""
+    author: "你的笔名"
+    theme: "academic-paper"
+    image_style: "academic-editorial"
+    voice: |
+      严谨、清楚、克制。先提出具体问题，再用可核验材料推进。
+      区分事实、推断和个人判断。不虚构经历，不制造焦虑，不堆砌口号。
+image_generation:
+  generator: "baoyu-image-gen"
+  codex_builtin_fallback: true
+  openai:
+    api_key: ""
+    base_url: "" # 填自己服务商的完整兼容接口地址，包含 /v1
+    image_model: "gpt-image-2" # 项目使用的兼容服务模型名；先确认你的服务商支持
+integrations:
+  wechatsync_mcp_token: ""
