@@ -66,6 +66,12 @@ python3 -m pytest wechat-ink/tests -q
 
 本地已通过 58 项测试；5 项可选 Bun 测试在未安装 Bun 时跳过。真实生图与微信接口需要使用者自行配置后验证。完整范围见 [验证说明](验证说明.md)。风格评分只是启发式检查，不保证平台 AI 判定结果。
 
+## 许可证
+
+本项目采用 [MIT License](LICENSE)，由 [Snowwit88](https://github.com/Snowwit88) 开发与维护。你可以使用、修改、分发及商用，但须保留适用的版权与许可声明。
+
+Snowwit88 的版权声明适用于本项目新增与修改的部分；沿用组件的原作者声明予以保留。来源与第三方许可说明见 [NOTICE.md](NOTICE.md)。
+
 ## 致谢
 
 部分基础工具与资源参考并沿用自 [wechat-publisher](https://github.com/jiji262/wechat-publisher)，感谢原作者的工作。
