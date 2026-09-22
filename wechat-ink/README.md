@@ -71,7 +71,7 @@ Windows 原生命令通常为 `py install.py`。需要联网从 Python 包仓库
 
 新版技能名、目录和配置文件统一为 `wechat-ink`，配置文件为 `wechat-ink.yaml`，环境变量前缀为 `WECHAT_INK_`。原有 `OPENAI_API_KEY` / `OPENAI_BASE_URL` / `OPENAI_IMAGE_MODEL` 不变。
 
-已安装首版的用户：安装新版到独立目录，将自己的旧配置在本机复制为新版配置名，并将 generator 值 `baoyu-image-gen` 改为 `ink-image-gen`、`baoyu-danger-gemini-web` 改为 `ink-gemini-web`。固定出口私有配置中的变量前缀、工具目录与 Python 路径也应对应更新。新版验证后再自行移除旧技能，避免客户端同时调用两个版本。安装器不会自动搬运或删除旧配置。
+已安装首版的用户：安装新版到独立目录，将自己的旧配置在本机复制为新版配置名，按当前配置示例设置 generator：常规生图使用 `ink-image-gen`，可选 Gemini Web 后端使用 `ink-gemini-web`。固定出口私有配置中的变量前缀、工具目录与 Python 路径也应对应更新。新版验证后再自行移除旧技能，避免客户端同时调用两个版本。安装器不会自动搬运或删除旧配置。
 
 文章作者只取使用者明确填写的署名，未填写时留空。
 

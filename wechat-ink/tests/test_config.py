@@ -38,7 +38,7 @@ def test_get_config_explicit_account(tmp_config_yaml):
     assert cfg["theme"] == "minimal-mono"
 
 
-def test_unified_config_reads_wechat_publisher_yaml(tmp_path, monkeypatch):
+def test_unified_config_reads_wechat_ink_yaml(tmp_path, monkeypatch):
     """wechat-ink.yaml should be the single supported config source."""
     yaml_path = tmp_path / "wechat-ink.yaml"
     yaml_path.write_text(textwrap.dedent("""\

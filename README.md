@@ -70,8 +70,4 @@ python3 -m pytest wechat-ink/tests -q
 
 本项目采用 [MIT License](LICENSE)，由 [Snowwit88](https://github.com/Snowwit88) 开发与维护。你可以使用、修改、分发及商用，但须保留适用的版权与许可声明。
 
-Snowwit88 的版权声明适用于本项目新增与修改的部分；沿用组件的原作者声明予以保留。来源与第三方许可说明见 [NOTICE.md](NOTICE.md)。
-
-## 致谢
-
-部分基础工具与资源参考并沿用自 [wechat-publisher](https://github.com/jiji262/wechat-publisher)，感谢原作者的工作。
+版权归属及第三方来源说明见 [NOTICE.md](NOTICE.md)。
