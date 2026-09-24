@@ -180,6 +180,7 @@ def test_demo_runs_without_site_packages(tmp_path):
     result=subprocess.run([sys.executable,'-S',str(root/'demo.py'),'--no-open'],cwd=tmp_path,capture_output=True,text=True)
     assert result.returncode==0,result.stderr
     assert (root/'demo.html').as_uri() in result.stdout
+    assert (root/'docs/index.html').read_bytes()==(root/'demo.html').read_bytes()
     from html.parser import HTMLParser
     class Frames(HTMLParser):
         article=None
