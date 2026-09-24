@@ -1,35 +1,30 @@
 #!/usr/bin/env python3
-"""复制分享包并安装独立依赖，不读取已有账号配置，不覆盖已有安装。"""
-import argparse, os, shutil, subprocess, sys, venv
+"""Install into a new skill directory; never replace an existing installation."""
 from pathlib import Path
+import argparse
+import os
+import shutil
+import subprocess
+import sys
+import venv
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--target', type=Path)
-    parser.add_argument('--skip-deps', action='store_true')
-    args=parser.parse_args()
-    if sys.version_info < (3,10):
-        parser.error('需要 Python 3.10 或更高版本')
+    p=argparse.ArgumentParser();p.add_argument('--target',type=Path);p.add_argument('--skip-deps',action='store_true');p.add_argument('--demo',action='store_true',help='只打开离线样稿，不安装依赖');a=p.parse_args()
+    if a.demo:
+        from demo import main as show_demo
+        return show_demo([])
+    if sys.version_info<(3,10):p.error('需要 Python 3.10 或更新版本')
+    dest=(a.target or Path(os.environ.get('CODEX_HOME',Path.home()/'.codex'))/'skills'/'wechat-ink-v2').expanduser().resolve()
+    if dest.exists():p.error('目标已存在；请选新的 --target，不会覆盖已有技能')
     source=Path(__file__).resolve().parent/'wechat-ink'
-    home=Path(os.environ.get('CODEX_HOME', str(Path.home()/'.codex'))).expanduser()
-    target=(args.target or home/'skills/wechat-ink').expanduser().resolve()
-    if target.exists():
-        parser.error('目标已存在，为保护原有技能和配置，未做任何修改：'+str(target))
-    shutil.copytree(source,target,ignore=shutil.ignore_patterns('.venv', '__pycache__', '.pytest_cache', '*.pyc', '.token_cache*', 'wechat-ink.yaml', 'wechat-egress.local.env', '*.log'))
-    config=target/'wechat-ink.yaml'
-    shutil.copyfile(target/'wechat-ink.yaml.example',config)
-    config.chmod(0o600)
-    print('技能已复制到：',target)
-    if not args.skip_deps:
-        try:
-            venv.EnvBuilder(with_pip=True).create(target/'.venv')
-            python=target/'.venv'/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
-            subprocess.run([str(python),'-m','pip','install','-r',str(target/'requirements.txt')],check=True)
-        except Exception as exc:
-            print('依赖安装未完成：'+type(exc).__name__,file=sys.stderr)
-            print('已复制文件保留。可在目标目录运行 python -m venv .venv，再用虚拟环境 Python -m pip install -r requirements.txt。',file=sys.stderr)
-            return 1
-    print('下一步：阅读安装目录 README.md，先试离线排版，再填写自己的配置。')
-    return 0
-if __name__=='__main__':
-    raise SystemExit(main())
+    shutil.copytree(source,dest,ignore=shutil.ignore_patterns('.venv','__pycache__','*.pyc','wechat-ink.yaml','output','.token_cache*','*.local.env'))
+    for name in ('LICENSE','THIRD_PARTY.md'):shutil.copy2(source.parent/name,dest/name)
+    config=dest/'wechat-ink.yaml';shutil.copy2(dest/'wechat-ink.yaml.example',config);config.chmod(0o600)
+    if not a.skip_deps:
+        venv.create(dest/'.venv',with_pip=True)
+        python=dest/'.venv'/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
+        result=subprocess.run([str(python),'-m','pip','install','-r',str(dest/'requirements.txt')])
+        if result.returncode:
+            print(f'文件已安装至 {dest}；依赖安装失败，可用该目录虚拟环境重试。',file=sys.stderr);return result.returncode
+    print(f'已安装：{dest}');return 0
+if __name__=='__main__':raise SystemExit(main())

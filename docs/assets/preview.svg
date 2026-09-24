@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" rx="24" fill="#edf1ec"/>
+<g font-family="system-ui, -apple-system, PingFang SC, Microsoft YaHei, sans-serif">
+<text x="64" y="76" font-size="16" font-weight="700" fill="#587665" letter-spacing="3">微墨 / V2 PREVIEW</text>
+<text x="64" y="176" font-size="52" font-weight="700" fill="#233f30">先看成品。</text>
+<text x="64" y="245" font-size="52" font-weight="700" fill="#233f30">再开始创作。</text>
+<text x="64" y="307" font-size="22" fill="#586c60">你的文稿 → 手机排版 → 可选微信草稿</text>
+<rect x="64" y="354" width="525" height="64" rx="12" fill="white"/>
+<text x="86" y="394" font-size="20" fill="#335540">01  打开 demo.html，直接看完整样稿</text>
+<rect x="64" y="431" width="525" height="64" rx="12" fill="white"/>
+<text x="86" y="471" font-size="20" fill="#335540">02  用自己的 AI 助手创作，再导入排版</text>
+<text x="64" y="558" font-size="17" fill="#64766a">离线样稿无需账号或密钥 · 不产生 API 费用</text>
+<text x="64" y="588" font-size="14" fill="#64766a">预置内容展示；真实生图与微信发布尚待验收</text>
+<rect x="721" y="35" width="389" height="580" rx="32" fill="#324c3c"/>
+<rect x="731" y="45" width="369" height="560" rx="23" fill="white"/>
+<text x="759" y="86" font-size="12" fill="#7c857e">微墨样稿 · 排版示意</text>
+<text x="759" y="135" font-size="22" fill="#252e29" font-weight="700">把复杂信息讲清楚</text>
+<rect x="759" y="159" width="311" height="150" fill="#eef2ef" stroke="#d4ddd5"/>
+<g fill="#d4e1d6"><rect x="777" y="203" width="79" height="53" rx="3"/><rect x="875" y="203" width="79" height="53" rx="3"/><rect x="973" y="203" width="79" height="53" rx="3"/></g>
+<g font-size="17" fill="#365443"><text x="800" y="236">输入</text><text x="899" y="236">分析</text><text x="996" y="236">表达</text></g>
+<text x="847" y="335" font-size="12" fill="#7c857e">离线测试图</text>
+<text x="759" y="385" font-size="19" font-weight="700" fill="#252e29">一、提出问题</text>
+<g font-size="15" fill="#434d46"><text x="759" y="422">开始写作前，先把问题缩成一句话。</text><text x="759" y="451">读者希望解决什么问题，这篇文章</text><text x="759" y="480">能够提供什么信息，是组织材料的起点。</text></g>
+<line x1="759" y1="510" x2="1070" y2="510" stroke="#d6ddd7"/>
+<text x="759" y="545" font-size="13" fill="#758277">完整演示包含图注、列表、表格与参考资料</text>
+</g></svg>

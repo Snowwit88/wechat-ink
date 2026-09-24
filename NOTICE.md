@@ -1,9 +1,0 @@
-# 来源与许可
-
-WeChat Ink（微墨）由 Snowwit88 独立维护。
-
-部分基础脚本、排版主题及参考资源沿用自 https://github.com/jiji262/wechat-publisher ，并在此基础上定制。上游 README 的 License 一节声明 MIT；核对时，上游仓库未提供单独的 LICENSE 文件。本仓库将该许可文本补齐在 LICENSE 中，并保留上游贡献者署名。该文件是本分发版整理的声明，不冒充从上游取得的原始文件。
-
-本版新增或调整了学术风制作规范、参考资料排版、固定出口流程、安装器、空白配置、离线示例及相关测试。文件内若另有来源或许可声明，应一并保留。
-
-为统一微墨的内部命名，`baoyu_image_gen*` 与 `baoyu_danger_gemini_web` 模块分别更名为 `ink_image_gen*` 与 `ink_gemini_web`。文件更名不改变这些模块的来源；相关来源和许可声明继续有效。
