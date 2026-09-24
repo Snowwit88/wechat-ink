@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
 <rect width="1200" height="650" rx="24" fill="#edf1ec"/>
 <g font-family="system-ui, -apple-system, PingFang SC, Microsoft YaHei, sans-serif">
-<text x="64" y="76" font-size="16" font-weight="700" fill="#587665" letter-spacing="3">微墨 / V2 PREVIEW</text>
+<text x="64" y="76" font-size="16" font-weight="700" fill="#587665" letter-spacing="3">微墨 / PREVIEW</text>
 <text x="64" y="176" font-size="52" font-weight="700" fill="#233f30">先看成品。</text>
 <text x="64" y="245" font-size="52" font-weight="700" fill="#233f30">再开始创作。</text>
 <text x="64" y="307" font-size="22" fill="#586c60">你的文稿 → 手机排版 → 可选微信草稿</text>
